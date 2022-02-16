@@ -17,7 +17,9 @@ document.getElementById("calculate").addEventListener("click", function () {
 document.getElementById("save").addEventListener("click", function () {
   const incomeInput = document.getElementById("income-input").value;
   const incomeAmount = parseFloat(incomeInput);
-  const savingsAmount = incomeAmount * 0.2;
+  const savingsRateText = document.getElementById("savings-percent").value;
+  const savingsRate = parseFloat(savingsRateText);
+  const savingsAmount = incomeAmount * (savingsRate / 100);
   const savingsText = document.getElementById("savings");
   savingsText.innerText = savingsAmount;
   const balanceAmountText = document.getElementById("balance-amount").innerText;
