@@ -1,0 +1,30 @@
+document.getElementById("calculate").addEventListener("click", function () {
+  const totalExpensesText = document.getElementById("total-expenses");
+  const incomeInput = document.getElementById("income-input").value;
+  const incomeAmount = parseFloat(incomeInput);
+  const foodInput = document.getElementById("food-input").value;
+  const foodAmount = parseFloat(foodInput);
+  const rentInput = document.getElementById("rent-input").value;
+  const rentAmount = parseFloat(rentInput);
+  const otherInput = document.getElementById("others-input").value;
+  const otherAmount = parseFloat(otherInput);
+  const totalExpenses = foodAmount + rentAmount + otherAmount;
+  totalExpensesText.innerText = totalExpenses;
+  const balanceAmount = incomeAmount - totalExpenses;
+  const balanceAmountText = document.getElementById("balance-amount");
+  balanceAmountText.innerText = balanceAmount;
+});
+document.getElementById("save").addEventListener("click", function () {
+  const incomeInput = document.getElementById("income-input").value;
+  const incomeAmount = parseFloat(incomeInput);
+  const savingsAmount = incomeAmount * 0.2;
+  const savingsText = document.getElementById("savings");
+  savingsText.innerText = savingsAmount;
+  const balanceAmountText = document.getElementById("balance-amount").innerText;
+  console.log(balanceAmountText);
+  const balanceAmount = parseFloat(balanceAmountText);
+  console.log(balanceAmount);
+  const remainingAmount = balanceAmount - savingsAmount;
+  const remainingBalanceText = document.getElementById("remaining-balance");
+  remainingBalanceText.innerText = remainingAmount;
+});

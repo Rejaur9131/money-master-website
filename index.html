@@ -22,7 +22,7 @@
   </head>
   <body>
     <header>
-      <h1 class="text-center text-danger py-1 fw">Money Manager</h1>
+      <h1 class="text-center text-danger py-2 fw">Money Manager</h1>
     </header>
     <main>
       <section class="container">
@@ -37,6 +37,7 @@
                 Income:
                 <input
                   class="input-group-text d-inline w-50 ms-1"
+                  id="income-input"
                   type="text"
                   value="10000"
                 />
@@ -48,6 +49,7 @@
                 <p class="fw-bold">
                   Food:
                   <input
+                    id="food-input"
                     class="input-group-text d-inline w-50 ms-3"
                     type="text"
                     value="3000"
@@ -56,6 +58,7 @@
                 <p class="fw-bold">
                   Rent:
                   <input
+                    id="rent-input"
                     class="input-group-text d-inline w-50 ms-3"
                     type="text"
                     value="2000"
@@ -64,31 +67,38 @@
                 <p class="fw-bold">
                   Others:
                   <input
+                    id="others-input"
                     class="input-group-text d-inline w-50 ms-1"
                     type="text"
                     value="500"
                   />
                 </p>
               </div>
-              <button class="btn btn-primary btn-lg shadow fw-bold mb-1">
+              <button
+                id="calculate"
+                class="btn btn-primary btn-lg shadow fw-bold mb-2"
+              >
                 Calculate
               </button>
-              <h4>Total Expenses: <span>5000</span></h4>
-              <h4>Balance: <span>4500</span></h4>
+              <h4>Total Expenses: <span id="total-expenses">5500</span></h4>
+              <h4>Balance: <span id="balance-amount">4500</span></h4>
               <div
-                class="d-flex justify-content-center align-items-baseline my-3"
+                class="d-flex justify-content-center align-items-baseline my-2"
               >
                 <p class="fw-bold fs-5 mx-2">Save:</p>
                 <input class="input-group-text w-25" type="text" value="20" />
                 <p class="fw-bold fs-5 mx-2">%</p>
-                <button class="btn btn-primary fw-bold">Save</button>
+                <button id="save" class="btn btn-primary fw-bold">Save</button>
               </div>
-              <h4>Savings Amount: <span>5000</span></h4>
-              <h4>Remaining Balance: <span>4500</span></h4>
+              <h4>Savings Amount: <span id="savings">2000</span></h4>
+              <h4>
+                Remaining Balance: <span id="remaining-balance">2500</span>
+              </h4>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="js/app.js"></script>
   </body>
 </html>
